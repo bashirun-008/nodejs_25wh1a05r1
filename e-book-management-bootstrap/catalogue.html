@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart - E-Book Store</title>
+    <title>Catalog - E-Book Store</title>
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="main-content">
 
+    <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">📚 E-Book Store</a>
@@ -20,87 +21,96 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="catalogue.html">Catalog</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="catalogue.html">Catalog</a></li>
                     <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
                     <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="cart.html">Cart 🛒</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.html">Cart 🛒</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="container my-5">
-        <h1 class="text-center mb-5">Shopping Cart</h1>
-        <div class="row g-4">
-            <div class="col-12 col-lg-8">
-                <div class="card shadow-sm">
-                    <div class="card-body">
-                        <h4 class="mb-4">Selected Books</h4>
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-hover align-middle">
-                                <thead class="table-dark">
-                                    <tr>
-                                        <th>Book</th>
-                                        <th>Price</th>
-                                        <th>Quantity</th>
-                                        <th>Total</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>HTML & CSS</td>
-                                        <td>₹399</td>
-                                        <td>1</td>
-                                        <td>₹399</td>
-                                    </tr>
-                                    <tr>
-                                        <td>JavaScript</td>
-                                        <td>₹499</td>
-                                        <td>2</td>
-                                        <td>₹998</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Python Programming</td>
-                                        <td>₹549</td>
-                                        <td>1</td>
-                                        <td>₹549</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-lg-4">
-                <div class="card shadow-sm">
-                    <div class="card-body">
-                        <h4 class="card-title mb-4">Order Summary</h4>
-                        <div class="d-flex justify-content-between mb-2">
-                            <span>Subtotal</span>
-                            <span>₹1,946</span>
-                        </div>
-                        <div class="d-flex justify-content-between mb-2">
-                            <span>Discount</span>
-                            <span class="text-success">- ₹100</span>
-                        </div>
-                        <hr>
-                        <div class="d-flex justify-content-between">
-                            <strong>Total</strong>
-                            <strong>₹1,846</strong>
-                        </div>
-                        <button class="btn btn-success w-100 mt-4">Proceed to Checkout</button>
-                        <a href="catalog.html" class="btn btn-outline-primary w-100 mt-2">Continue Shopping</a>
-                    </div>
-                </div>
-            </div>
+    <!-- PAGE HEADER -->
+    <div class="bg-light py-4 mb-4">
+        <div class="container text-center">
+            <h1 class="display-6 fw-bold">E-Book Catalog</h1>
+            <p class="lead text-muted mb-0">Browse our collection of programming and technology titles.</p>
         </div>
     </div>
 
-   <footer class="bg-dark text-white text-center p-3">
-        <p class="mb-0">© 2026 E-Book Management System  25WH1A05R1</p>
+    <!-- MAIN CATALOG GRID -->
+    <div class="container mb-5">
+        <div class="row g-4">
+
+            <!-- Book 1 -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm text-center">
+                    <img src="html.jpeg" class="card-img-top p-3" alt="HTML and CSS" style="max-height: 200px; object-fit: contain;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">HTML & CSS</h5>
+                        <p class="card-text text-muted">Master modern web design principles and layout techniques.</p>
+                        <div class="mt-auto">
+                            <p class="h5 text-primary mb-3">₹399</p>
+                            <button class="btn btn-primary w-100">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 2 -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm text-center">
+                    <img src="javas.jpeg" class="card-img-top p-3" alt="JavaScript" style="max-height: 200px; object-fit: contain;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">JavaScript</h5>
+                        <p class="card-text text-muted">Learn full-stack programming and dynamic web development.</p>
+                        <div class="mt-auto">
+                            <p class="h5 text-primary mb-3">₹499</p>
+                            <button class="btn btn-primary w-100">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 3 -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm text-center">
+                    <img src="python.jpeg" class="card-img-top p-3" alt="Python Programming" style="max-height: 200px; object-fit: contain;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Python Programming</h5>
+                        <p class="card-text text-muted">Explore scripting, data analysis, and automation basics.</p>
+                        <div class="mt-auto">
+                            <p class="h5 text-primary mb-3">₹549</p>
+                            <button class="btn btn-primary w-100">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 4 -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm text-center">
+                    <img src="java.jpeg" class="card-img-top p-3" alt="Java Essentials" style="max-height: 200px; object-fit: contain;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Java Essentials</h5>
+                        <p class="card-text text-muted">Understand object-oriented programming fundamentals.</p>
+                        <div class="mt-auto">
+                            <p class="h5 text-primary mb-3">₹449</p>
+                            <button class="btn btn-primary w-100">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white text-center p-3 mt-auto">
+        <p class="mb-0">© 2026 E-Book Management System 25WH1A05R1</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
