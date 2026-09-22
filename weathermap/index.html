@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Forecast App</title>
+  
+  <!-- Chart.js Library via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      text-align: center;
+    }
+    .input-group {
+      margin-bottom: 1.5rem;
+    }
+    input {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      width: 250px;
+    }
+    button {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    #message {
+      height: 1.5rem;
+      font-weight: bold;
+      color: #333;
+    }
+    .chart-container {
+      position: relative;
+      margin: auto;
+      height: 60vh;
+      width: 80vw;
+      max-width: 750px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>5-Day Weather Forecast</h1>
+
+  <div class="input-group">
+    <input type="text" id="cityInput" placeholder="Enter city name..." />
+    <button id="getWeatherBtn">Get Weather</button>
+  </div>
+
+  <div id="message"></div>
+
+  <div class="chart-container">
+    <canvas id="weatherChart"></canvas>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
